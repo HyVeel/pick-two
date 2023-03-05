@@ -9,32 +9,12 @@
     font-size: var(--font-size);
 }
 
-#title
-{
-    font-size: 1.5em;
-    text-align: center;
-}
-
 #table
 {
     display: grid;
     grid-template-columns: min-content auto;
     align-items: center;
     gap: var(--default-gap);
-}
-
-.switch
-{
-    position: relative;
-    display: inline-block;
-    width: 3.5em;
-    height: 2em;
-    font-size: 0.75em;
-}
-
-.switch input
-{
-    display: none;
 }
 
 #switch-1, #text-1
@@ -50,6 +30,20 @@
 #switch-3, #text-3
 {
     grid-row-start: 3;
+}
+
+.switch
+{
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+    font-size: 0.75em;
+}
+
+.switch input
+{
+    display: none;
 }
 
 .slider
@@ -86,4 +80,48 @@ input:checked + .slider
 input:checked + .slider:before
 {
     transform: translateX(1.5em);
+}
+
+#title
+{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#title, #text-1, #text-2, #text-3
+{
+    display: flex;
+    align-items: center;
+    min-width: 5px;
+}
+
+:where(#title, #text-1, #text-2, #text-3) p
+{
+    min-width: 10px;
+}
+
+#content img
+{
+    display: none;
+    height: 1em;
+    margin-left: 5px;
+}
+
+:is(#title, #text-1, #text-2, #text-3) p > img /* obrazy w tekście */
+{
+    display: inline-block;
+    height: 1em;
+    opacity: 1;
+}
+
+#content :is(#title, #text-1, #text-2, #text-3):hover > img
+{
+    display: inline-block;
+    opacity: 0.5;
+}
+
+#content :is(#title, #text-1, #text-2, #text-3):focus-within > img
+{
+    display: inline-block;
+    opacity: 1;
 }
