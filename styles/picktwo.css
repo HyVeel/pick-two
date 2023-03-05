@@ -107,12 +107,12 @@ input:checked + .slider:before
 {
     display: flex;
     align-items: center;
-    min-width: 5px;
 }
 
-:where(#title, #text-1, #text-2, #text-3) p
+:where(#title, #text-1, #text-2, #text-3) > span:empty::before
 {
-    min-width: 10px;
+    content: attr(text-placeholder);
+    color: var(--switch-bg-color);
 }
 
 #content img
@@ -123,7 +123,7 @@ input:checked + .slider:before
     user-select: none;
 }
 
-:is(#title, #text-1, #text-2, #text-3) p > img /* obrazy w tekście */
+:is(#title, #text-1, #text-2, #text-3) span > img /* obrazy w tekście */
 {
     display: inline-block;
     height: 1em;
