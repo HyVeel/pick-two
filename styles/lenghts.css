@@ -3,7 +3,7 @@
     /* Pick two */
     --content-width: 75%; /* szerokość treści */
     --max-content-width: 750px; /* max szerokość treści */
-    --font-size: 36px; /* Wielkość czcionki treści */
+    --font-size: 32px; /* Wielkość czcionki treści */
     --slider-time: 0.4s; /* Czas slidera na przesunięcie */
 
     /* Misc */
