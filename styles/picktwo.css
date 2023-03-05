@@ -1,4 +1,4 @@
-@media (min-width: 500px)
+@media (min-width: 400px)
 {
     #content :is(#title, #text-1, #text-2, #text-3):hover > img
     {
@@ -120,6 +120,7 @@ input:checked + .slider:before
     display: none;
     height: 1em;
     margin-left: 5px;
+    user-select: none;
 }
 
 :is(#title, #text-1, #text-2, #text-3) p > img /* obrazy w tekście */
