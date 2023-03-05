@@ -1,0 +1,8 @@
+.dark-theme
+{
+    --bg-color: #333333; /* tło strony */
+    --text-color: #ffffff; /* tekst */
+    --main-color: #ffa500; /* główny kolor */
+    --switch-bg-color: #cccccc; /* tło wyłączonego przełącznika */
+    --switch-slider-color: #ffffff; /* tło slidera */
+}
